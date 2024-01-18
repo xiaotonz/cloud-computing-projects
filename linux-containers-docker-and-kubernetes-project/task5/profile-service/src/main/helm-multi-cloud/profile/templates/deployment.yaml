@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azure-vote-front
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-profile
+  template:
+    metadata:
+      labels:
+        app: spring-profile
+    spec:
+      containers:
+      - name: spring-profile-container
+        image: xiaotonzacr.azurecr.io/profile-service:v7
+        resources:
+          requests:
+            cpu: 200m
+        envFrom:
+        - configMapRef:
+            name: azure-vote-front-profile-config
+        ports:
+        - containerPort: 8080
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: azure-vote-front-hpa
+  namespace: default
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: azure-vote-front
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50

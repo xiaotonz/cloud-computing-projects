@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.microsoft.azure</groupId>
+    <artifactId>azure-eventhubs</artifactId>
+    <version>1.0.1</version>
+    <packaging>jar</packaging>
+
+    <name>azure-eventhubs</name>
+    <description>
+        Client library for talking to Microsoft Azure Event Hubs.
+    </description>
+    <url>https://github.com/Azure/azure-event-hubs-java/</url>
+
+    <licenses>
+        <license>
+            <name>MIT license</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>SREERAM GARLAPATI</name>
+            <organization>Microsoft</organization>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:Azure/azure-event-hubs-java.git</connection>
+        <developerConnection>scm:git:git@github.com:Azure/azure-event-hubs-java.git</developerConnection>
+        <url>git@github.com:Azure/azure-event-hubs-java.git</url>
+    </scm>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.qpid</groupId>
+            <artifactId>proton-j</artifactId>
+            <version>0.25.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+    </dependencies>
+
+</project>

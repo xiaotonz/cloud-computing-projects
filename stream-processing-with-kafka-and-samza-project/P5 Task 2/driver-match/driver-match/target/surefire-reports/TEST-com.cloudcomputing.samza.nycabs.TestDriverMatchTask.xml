@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.cloudcomputing.samza.nycabs.TestDriverMatchTask" time="3.098" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.382-b05"/>
+    <property name="java.vm.vendor" value="Red Hat, Inc."/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/hadoop/driver-match/driver-match"/>
+    <property name="java.vendor.url" value="https://www.redhat.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/hadoop/driver-match/driver-match"/>
+    <property name="java.runtime.version" value="1.8.0_382-b05"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/home/hadoop/apache-maven-3.8.8/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/home/hadoop/apache-maven-3.8.8/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.14.154-99.181.amzn1.x86_64"/>
+    <property name="library.jansi.path" value="/home/hadoop/apache-maven-3.8.8/lib/jansi-native"/>
+    <property name="user.home" value="/home/hadoop"/>
+    <property name="user.timezone" value="UTC"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="hadoop"/>
+    <property name="java.class.path" value="/home/hadoop/apache-maven-3.8.8/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_382"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/resources.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/rt.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/jsse.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/jce.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/charsets.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/lib/jfr.jar:/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.382.b05-1.79.amzn1.x86_64/jre/classes"/>
+    <property name="java.vendor" value="Red Hat, Inc."/>
+    <property name="java.specification.maintenance.version" value="5"/>
+    <property name="maven.home" value="/home/hadoop/apache-maven-3.8.8"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="https://forums.aws.amazon.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="com.cloudcomputing.samza.nycabs.TestDriverMatchTask" name="testDriverMatchTask" time="3.098">
+    <error message="Application could not finish successfully" type="org.apache.samza.SamzaException">org.apache.samza.SamzaException: Application could not finish successfully
+	at org.apache.samza.test.framework.TestRunner.run(TestRunner.java:294)
+	at com.cloudcomputing.samza.nycabs.TestDriverMatchTask.testDriverMatchTask(TestDriverMatchTask.java:42)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.samza.SamzaException: org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:150)
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:749)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.TaskCallbackImpl.failure(TaskCallbackImpl.java:89)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:75)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63)
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201)
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54)
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199)
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470)
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412)
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346)
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233)
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165)
+	... 6 more
+Caused by: java.lang.NullPointerException
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.handleRideRequest(DriverMatchTask.java:186)
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.streamEvent(DriverMatchTask.java:133)
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.process(DriverMatchTask.java:76)
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:72)
+	... 15 more
+</error>
+    <system-out>Failed in parse // Test gender preference., skip into next line
+Failed in parse // Test salary., skip into next line
+Failed in parse // Test driver rating, skip into next line
+Failed in parse // Test distance, skip into next line
+[main] InMemoryManager [INFO] Initializing the stream for events
+[main] InMemoryManager [INFO] Initializing the stream for driver-locations
+[main] InMemoryManager [INFO] Initializing the stream for match-stream
+[main] TestRunner [INFO] Deleting the directory /tmp/Kee8yqswK7-non-logged
+[main] TestRunner [INFO] Deleting the directory /tmp/Kee8yqswK7-logged
+[main] JobPlanner [INFO] app.name is defined, generating job.name equal to app.name value: samza-test
+[main] ApplicationDescriptorImpl [INFO] Using NoOpSerde as the key serde for stream driver-locations. Keys will not be (de)serialized
+[main] ApplicationDescriptorImpl [INFO] Using NoOpSerde as the key serde for stream events. Keys will not be (de)serialized
+[main] ApplicationDescriptorImpl [INFO] Using NoOpSerde as the key serde for stream match-stream. Keys will not be (de)serialized
+[main] LocalApplicationRunner [INFO] Not BATCH mode and hence not generating run id
+[main] JobPlanner [WARN] SamzaApplications should not specify task.inputs in configuration. Specify them using InputDescriptors instead. Ignoring configured task.inputs value of kafka.events,kafka.driver-locations
+[main] JobNodeConfigurationGenerator [INFO] Replacing generated config for key: systems.kafka.samza.factory value: org.apache.samza.system.kafka.KafkaSystemFactory with original config value: org.apache.samza.system.inmemory.InMemorySystemFactory
+[main] JobNodeConfigurationGenerator [INFO] Replacing generated config for key: job.default.system value: kafka with original config value: default-samza-system
+[main] JobPlanner [WARN] job.name is a deprecated configuration, use use app.name instead.
+[main] JobPlanner [INFO] app.name is defined, generating job.name equal to app.name value: samza-test
+[main] ExecutionPlanner [INFO] Fetched partition count value 1 for stream match-stream
+[main] ExecutionPlanner [INFO] Fetched partition count value 1 for stream events
+[main] ExecutionPlanner [INFO] Fetched partition count value 1 for stream driver-locations
+[main] LocalJobPlanner [INFO] Execution Plan: 
+{&quot;jobs&quot;:[{&quot;jobName&quot;:&quot;samza-test&quot;,&quot;jobId&quot;:&quot;1&quot;,&quot;operatorGraph&quot;:{&quot;inputStreams&quot;:[{&quot;streamId&quot;:&quot;driver-locations&quot;,&quot;nextOperatorIds&quot;:[]},{&quot;streamId&quot;:&quot;events&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;outputStreams&quot;:[{&quot;streamId&quot;:&quot;match-stream&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;operators&quot;:{}}}],&quot;sourceStreams&quot;:{&quot;driver-locations&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;driver-locations&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;driver-locations&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]},&quot;events&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;events&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;events&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]}},&quot;sinkStreams&quot;:{&quot;match-stream&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;match-stream&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;match-stream&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[&quot;samza-test&quot;],&quot;targetJobs&quot;:[]}},&quot;intermediateStreams&quot;:{},&quot;tables&quot;:{},&quot;applicationName&quot;:&quot;samza-test&quot;,&quot;applicationId&quot;:&quot;1&quot;}
+[main] TableConfigGenerator [INFO] TableConfigGenerator has generated configs {}
+[main] JobNodeConfigurationGenerator [INFO] Job samza-test-1 has generated configs {serializers.registry.JsonSerde-addd5cd2-9c02-40b0-b8be-5cada3c5ef00.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, streams.events.samza.msg.serde=JsonSerde-addd5cd2-9c02-40b0-b8be-5cada3c5ef00, job.id=1, job.name=samza-test, samza.internal.execution.plan={&quot;jobs&quot;:[{&quot;jobName&quot;:&quot;samza-test&quot;,&quot;jobId&quot;:&quot;1&quot;,&quot;operatorGraph&quot;:{&quot;inputStreams&quot;:[{&quot;streamId&quot;:&quot;driver-locations&quot;,&quot;nextOperatorIds&quot;:[]},{&quot;streamId&quot;:&quot;events&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;outputStreams&quot;:[{&quot;streamId&quot;:&quot;match-stream&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;operators&quot;:{}}}],&quot;sourceStreams&quot;:{&quot;driver-locations&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;driver-locations&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;driver-locations&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]},&quot;events&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;events&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;events&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]}},&quot;sinkStreams&quot;:{&quot;match-stream&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;match-stream&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;match-stream&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[&quot;samza-test&quot;],&quot;targetJobs&quot;:[]}},&quot;intermediateStreams&quot;:{},&quot;tables&quot;:{},&quot;applicationName&quot;:&quot;samza-test&quot;,&quot;applicationId&quot;:&quot;1&quot;}, serializers.registry.JsonSerde-504439b3-a2be-4264-af2b-c6b4aebe60cf.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, streams.driver-locations.samza.msg.serde=JsonSerde-ee0b3a82-3618-415d-94ac-0bfa0aaa06c2, serializers.registry.JsonSerde-ee0b3a82-3618-415d-94ac-0bfa0aaa06c2.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, task.inputs=kafka.driver-locations,kafka.events, streams.match-stream.samza.msg.serde=JsonSerde-504439b3-a2be-4264-af2b-c6b4aebe60cf}
+[main] JobNodeConfigurationGenerator [INFO] Replacing generated config for key: streams.driver-locations.samza.msg.serde value: JsonSerde-ee0b3a82-3618-415d-94ac-0bfa0aaa06c2 with original config value: null
+[main] JobNodeConfigurationGenerator [INFO] Replacing generated config for key: streams.events.samza.msg.serde value: JsonSerde-addd5cd2-9c02-40b0-b8be-5cada3c5ef00 with original config value: null
+[main] JobNodeConfigurationGenerator [INFO] Replacing generated config for key: streams.match-stream.samza.msg.serde value: JsonSerde-504439b3-a2be-4264-af2b-c6b4aebe60cf with original config value: null
+[main] LocalJobPlanner [INFO] Set of intermediate streams is empty. Nothing to create.
+[main] TaskConfigJava [WARN] Unable to parse user-configure value for task.shutdown.ms - null. Using default value 30000
+[main] JobModelManager$ [INFO] SystemStreamPartitionGrouper org.apache.samza.container.grouper.stream.GroupByPartition@58fe0499 has grouped the SystemStreamPartitions into 1 tasks with the following taskNames: {Partition 0=[SystemStreamPartition [kafka, events, 0], SystemStreamPartition [kafka, driver-locations, 0]]}
+[main] JobModelManager$ [INFO] New task Partition 0 is being assigned changelog partition 0.
+[main] StreamProcessor [INFO] Job model expired. Shutting down the container: null of stream processor: 1.
+[main] StreamProcessor [INFO] Container: null shutdown completed for stream processor: 1.
+[main] SamzaContainer$ [INFO] Setting up Samza container: samza-container-1
+[main] SamzaContainer$ [INFO] Samza container PID: 8908@ip-172-31-3-54
+[main] STARTUP_LOGGER [INFO] Samza container PID: 8908@ip-172-31-3-54
+Container PID: 8908@ip-172-31-3-54
+[main] SamzaContainer$ [INFO] Using configuration: {serializers.registry.JsonSerde-addd5cd2-9c02-40b0-b8be-5cada3c5ef00.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, systems.kafka.samza.factory=org.apache.samza.system.inmemory.InMemorySystemFactory, job.default.system=default-samza-system, stores.driver-loc.factory=org.apache.samza.storage.kv.RocksDbKeyValueStorageEngineFactory, job.id=1, processor.id=1, streams.events.samza.key.serde=null, serializers.registry.string.class=org.apache.samza.serializers.StringSerdeFactory, systems.kafka.default.stream.replication.factor=1, streams.match-stream.samza.key.serde=null, streams.match-stream.samza.system=kafka, systems.default-samza-system.samza.factory=org.apache.samza.system.inmemory.InMemorySystemFactory, streams.driver-locations.samza.system=kafka, job.host-affinity.enabled=false, job.name=samza-test, startpoint.metadata.store.factory=org.apache.samza.metadatastore.InMemoryMetadataStoreFactory, serializers.registry.JsonSerde-504439b3-a2be-4264-af2b-c6b4aebe60cf.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, serializers.registry.JsonSerde-ee0b3a82-3618-415d-94ac-0bfa0aaa06c2.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, systems.kafka.producer.bootstrap.servers=172.31.9.125:9092,172.31.3.201:9092,172.31.3.54:9092, job.coordinator.factory=org.apache.samza.standalone.PassthroughJobCoordinatorFactory, app.name=samza-test, job.logged.store.base.dir=/tmp/Kee8yqswK7-logged, systems.kafka.consumer.zookeeper.connect=172.31.3.54:2181, inmemory.scope=Kee8yqswK7, stores.driver-loc.msg.serde=json, systems.default-samza-system.default.stream.samza.offset.default=oldest, samza.internal.execution.plan={&quot;jobs&quot;:[{&quot;jobName&quot;:&quot;samza-test&quot;,&quot;jobId&quot;:&quot;1&quot;,&quot;operatorGraph&quot;:{&quot;inputStreams&quot;:[{&quot;streamId&quot;:&quot;driver-locations&quot;,&quot;nextOperatorIds&quot;:[]},{&quot;streamId&quot;:&quot;events&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;outputStreams&quot;:[{&quot;streamId&quot;:&quot;match-stream&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;operators&quot;:{}}}],&quot;sourceStreams&quot;:{&quot;driver-locations&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;driver-locations&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;driver-locations&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]},&quot;events&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;events&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;events&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]}},&quot;sinkStreams&quot;:{&quot;match-stream&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;match-stream&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;match-stream&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[&quot;samza-test&quot;],&quot;targetJobs&quot;:[]}},&quot;intermediateStreams&quot;:{},&quot;tables&quot;:{},&quot;applicationName&quot;:&quot;samza-test&quot;,&quot;applicationId&quot;:&quot;1&quot;}, streams.driver-locations.samza.msg.serde=null, task.inputs=kafka.driver-locations,kafka.events, task.name.grouper.factory=org.apache.samza.container.grouper.task.SingleContainerGrouperFactory, stores.driver-loc.key.serde=string, systems.kafka.default.stream.samza.offset.default=oldest, deploy.test=true, streams.events.samza.msg.serde=null, app.mode=STREAM, job.non-logged.store.base.dir=/tmp/Kee8yqswK7-non-logged, serializers.registry.json.class=org.apache.samza.serializers.JsonSerdeFactory, app.class=com.cloudcomputing.samza.nycabs.application.DriverMatchTaskApplication, streams.match-stream.samza.msg.serde=null, streams.events.samza.system=kafka, streams.driver-locations.samza.key.serde=null}
+[main] STARTUP_LOGGER [INFO] Using configuration: {serializers.registry.JsonSerde-addd5cd2-9c02-40b0-b8be-5cada3c5ef00.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, systems.kafka.samza.factory=org.apache.samza.system.inmemory.InMemorySystemFactory, job.default.system=default-samza-system, stores.driver-loc.factory=org.apache.samza.storage.kv.RocksDbKeyValueStorageEngineFactory, job.id=1, processor.id=1, streams.events.samza.key.serde=null, serializers.registry.string.class=org.apache.samza.serializers.StringSerdeFactory, systems.kafka.default.stream.replication.factor=1, streams.match-stream.samza.key.serde=null, streams.match-stream.samza.system=kafka, systems.default-samza-system.samza.factory=org.apache.samza.system.inmemory.InMemorySystemFactory, streams.driver-locations.samza.system=kafka, job.host-affinity.enabled=false, job.name=samza-test, startpoint.metadata.store.factory=org.apache.samza.metadatastore.InMemoryMetadataStoreFactory, serializers.registry.JsonSerde-504439b3-a2be-4264-af2b-c6b4aebe60cf.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, serializers.registry.JsonSerde-ee0b3a82-3618-415d-94ac-0bfa0aaa06c2.samza.serialized.instance=rO0ABXNyACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZZrRBKe99y+SAgABTAADTE9HdAASTG9yZy9zbGY0ai9Mb2dnZXI7eHBzcgAkb3JnLmFwYWNoZS5sb2dnaW5nLnNsZjRqLkxvZzRqTG9nZ2VybTROY3rBHXwDAAJaAAtldmVudExvZ2dlckwABG5hbWV0ABJMamF2YS9sYW5nL1N0cmluZzt4cAB0ACZvcmcuYXBhY2hlLnNhbXphLnNlcmlhbGl6ZXJzLkpzb25TZXJkZXg=, systems.kafka.producer.bootstrap.servers=172.31.9.125:9092,172.31.3.201:9092,172.31.3.54:9092, job.coordinator.factory=org.apache.samza.standalone.PassthroughJobCoordinatorFactory, app.name=samza-test, job.logged.store.base.dir=/tmp/Kee8yqswK7-logged, systems.kafka.consumer.zookeeper.connect=172.31.3.54:2181, inmemory.scope=Kee8yqswK7, stores.driver-loc.msg.serde=json, systems.default-samza-system.default.stream.samza.offset.default=oldest, samza.internal.execution.plan={&quot;jobs&quot;:[{&quot;jobName&quot;:&quot;samza-test&quot;,&quot;jobId&quot;:&quot;1&quot;,&quot;operatorGraph&quot;:{&quot;inputStreams&quot;:[{&quot;streamId&quot;:&quot;driver-locations&quot;,&quot;nextOperatorIds&quot;:[]},{&quot;streamId&quot;:&quot;events&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;outputStreams&quot;:[{&quot;streamId&quot;:&quot;match-stream&quot;,&quot;nextOperatorIds&quot;:[]}],&quot;operators&quot;:{}}}],&quot;sourceStreams&quot;:{&quot;driver-locations&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;driver-locations&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;driver-locations&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]},&quot;events&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;events&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;events&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[],&quot;targetJobs&quot;:[&quot;samza-test&quot;]}},&quot;sinkStreams&quot;:{&quot;match-stream&quot;:{&quot;streamSpec&quot;:{&quot;id&quot;:&quot;match-stream&quot;,&quot;systemName&quot;:&quot;kafka&quot;,&quot;physicalName&quot;:&quot;match-stream&quot;,&quot;partitionCount&quot;:1},&quot;sourceJobs&quot;:[&quot;samza-test&quot;],&quot;targetJobs&quot;:[]}},&quot;intermediateStreams&quot;:{},&quot;tables&quot;:{},&quot;applicationName&quot;:&quot;samza-test&quot;,&quot;applicationId&quot;:&quot;1&quot;}, streams.driver-locations.samza.msg.serde=null, task.inputs=kafka.driver-locations,kafka.events, task.name.grouper.factory=org.apache.samza.container.grouper.task.SingleContainerGrouperFactory, stores.driver-loc.key.serde=string, systems.kafka.default.stream.samza.offset.default=oldest, deploy.test=true, streams.events.samza.msg.serde=null, app.mode=STREAM, job.non-logged.store.base.dir=/tmp/Kee8yqswK7-non-logged, serializers.registry.json.class=org.apache.samza.serializers.JsonSerdeFactory, app.class=com.cloudcomputing.samza.nycabs.application.DriverMatchTaskApplication, streams.match-stream.samza.msg.serde=null, streams.events.samza.system=kafka, streams.driver-locations.samza.key.serde=null}
+[main] SamzaContainer$ [INFO] Using container model: ContainerModel [id=1, tasks={Partition 0=TaskModel [taskName=Partition 0, systemStreamPartitions=[SystemStreamPartition [kafka, events, 0], SystemStreamPartition [kafka, driver-locations, 0]], changeLogPartition=Partition [partition=0], taskMode=Active]}]
+[main] STARTUP_LOGGER [INFO] Using container model: ContainerModel [id=1, tasks={Partition 0=TaskModel [taskName=Partition 0, systemStreamPartitions=[SystemStreamPartition [kafka, events, 0], SystemStreamPartition [kafka, driver-locations, 0]], changeLogPartition=Partition [partition=0], taskMode=Active]}]
+[main] SamzaContainer$ [INFO] Got side input store system streams: Set()
+[main] SamzaContainer$ [INFO] Got system names: Buffer(kafka, default-samza-system)
+[main] SamzaContainer$ [INFO] Got serde streams: Set(SystemStream [system=kafka, stream=match-stream], SystemStream [system=kafka, stream=driver-locations], SystemStream [system=kafka, stream=events])
+[main] SamzaContainer$ [INFO] Got system factories: Set(kafka, default-samza-system)
+[main] SamzaContainer$ [INFO] Got system admins: [kafka, default-samza-system]
+[main] SamzaContainer$ [INFO] Got input stream metadata: Map(SystemStream [system=kafka, stream=driver-locations] -&gt; SystemStreamMetadata [streamName=driver-locations, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=0, newestOffset=1, upcomingOffset=2]}], SystemStream [system=kafka, stream=events] -&gt; SystemStreamMetadata [streamName=events, partitionMetadata={Partition [partition=0]=SystemStreamPartitionMetadata [oldestOffset=0, newestOffset=16, upcomingOffset=17]}])
+[main] SamzaContainer$ [INFO] Got system consumers: Set(kafka)
+[main] SamzaContainer$ [INFO] Got system producers: Set(kafka, default-samza-system)
+[main] SamzaContainer$ [INFO] Got serdes from factories: Set(string, json)
+[main] SamzaContainer$ [INFO] Got serdes from serialized instances: Set(JsonSerde-ee0b3a82-3618-415d-94ac-0bfa0aaa06c2, JsonSerde-addd5cd2-9c02-40b0-b8be-5cada3c5ef00, JsonSerde-504439b3-a2be-4264-af2b-c6b4aebe60cf)
+[main] SamzaContainer$ [INFO] Got change log system streams: Map()
+[main] SamzaContainer$ [INFO] Got intermediate streams: List()
+[main] SamzaContainer$ [INFO] Setting up JVM metrics.
+[main] SamzaContainer$ [INFO] Setting up message chooser.
+[main] DefaultChooser [INFO] Building default chooser with: useBatching=false, useBootstrapping=false, usePriority=false
+[main] SamzaContainer$ [INFO] Setting up metrics reporters.
+[main] SamzaContainer$ [INFO] Got metrics reporters: Set()
+[main] SamzaContainer$ [INFO] Got security manager: null
+[main] SamzaContainer$ [INFO] Got checkpoint manager: null
+[main] SamzaContainer$ [INFO] Got checkpointListeners : Map()
+[main] SamzaContainer$ [INFO] Got offset manager: org.apache.samza.checkpoint.OffsetManager@9635fa
+[main] SamzaContainer$ [INFO] Got storage engines: Set(driver-loc)
+[main] SamzaContainer$ [INFO] Got thread pool size: 0
+[main] TaskFactoryUtil [INFO] Converting StreamTask to AsyncStreamTaskAdapter
+[main] SamzaContainer$ [INFO] Got default storage engine base directory: /home/hadoop/driver-match/driver-match/state
+[main] SamzaContainer$ [INFO] Got base directory for non logged data stores: /tmp/Kee8yqswK7-non-logged
+[main] SamzaContainer$ [INFO] Got base directory for logged data stores: /tmp/Kee8yqswK7-logged
+[main] ContainerStorageManager [INFO] Starting with changelogSystemStreams = {} sideInputSystemStreams = {}
+[main] RocksDbOptionsHelper [INFO] Using prepareForBulkLoad for restore to /tmp/Kee8yqswK7-non-logged/driver-loc/Partition_0
+[main] ContainerStorageManager [INFO] Created store driver-loc for task Partition 0 in mode BulkLoad
+[main] SamzaContainer$ [INFO] Got task SSPs: Set(SystemStreamPartition [kafka, events, 0], SystemStreamPartition [kafka, driver-locations, 0])
+[main] SamzaContainer$ [INFO] Got task side input SSPs: Set()
+[main] TableManager [INFO] Added 0 tables
+[main] SamzaContainer$ [INFO] Got table manager
+[main] RunLoopFactory [INFO] Got window milliseconds: -1.
+[main] RunLoopFactory [INFO] Got commit milliseconds: 60000.
+[main] RunLoopFactory [INFO] Got taskMaxConcurrency: 1.
+[main] RunLoopFactory [INFO] Got asyncCommitEnabled: false.
+[main] RunLoopFactory [INFO] Got callbackTimeout: -1.
+[main] RunLoopFactory [INFO] Got maxIdleMs: 10.
+[main] RunLoopFactory [INFO] Run loop in asynchronous mode.
+[main] NoThrottlingDiskQuotaPolicy [INFO] Using a no throttling disk quota policy
+[main] SamzaContainer$ [INFO] Disk quotas disabled because polling interval is not set (container.disk.poll.interval.ms)
+[main] SamzaContainer$ [INFO] Samza container setup complete.
+[main] StreamProcessor [INFO] Starting the container: org.apache.samza.container.SamzaContainer@4c4d362a for the stream processor: 1.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting container.
+[Samza StreamProcessor Container Thread-0] JmxServer [INFO] According to Util.getLocalHost.getHostName we are ip-172-31-3-54
+[Samza StreamProcessor Container Thread-0] JmxServer [INFO] Started JmxServer registry port=41959 server port=35325 url=service:jmx:rmi://localhost:35325/jndi/rmi://localhost:41959/jmxrmi
+[Samza StreamProcessor Container Thread-0] STARTUP_LOGGER [INFO] Started JmxServer registry port=41959 server port=35325 url=service:jmx:rmi://localhost:35325/jndi/rmi://localhost:41959/jmxrmi
+[Samza StreamProcessor Container Thread-0] JmxServer [INFO] If you are tunneling, you might want to try JmxServer registry port=41959 server port=35325 url=service:jmx:rmi://ip-172-31-3-54:35325/jndi/rmi://ip-172-31-3-54:41959/jmxrmi
+[Samza StreamProcessor Container Thread-0] STARTUP_LOGGER [INFO] If you are tunneling, you might want to try JmxServer registry port=41959 server port=35325 url=service:jmx:rmi://ip-172-31-3-54:35325/jndi/rmi://ip-172-31-3-54:41959/jmxrmi
+JMX Server: JmxServer registry port=41959 server port=35325 url=service:jmx:rmi://ip-172-31-3-54:35325/jndi/rmi://ip-172-31-3-54:41959/jmxrmi
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Registering task instance metrics.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting JVM metrics.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting metrics reporters.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting admin multiplexer.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Registering task instances with offsets.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting offset manager.
+[Samza StreamProcessor Container Thread-0] OffsetManager [INFO] Successfully loaded last processed offsets: {}
+[Samza StreamProcessor Container Thread-0] OffsetManager [INFO] Successfully loaded starting offsets: Map(Partition 0 -&gt; Map(SystemStreamPartition [kafka, driver-locations, 0] -&gt; 0, SystemStreamPartition [kafka, events, 0] -&gt; 0))
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting container storage manager.
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Store Restore started
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Got non logged storage partition directory as /tmp/Kee8yqswK7-non-logged/driver-loc/Partition_0
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Got logged storage partition directory as /tmp/Kee8yqswK7-logged/driver-loc/Partition_0
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Deleting logged storage partition directory /tmp/Kee8yqswK7-logged/driver-loc/Partition_0
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Using non logged storage partition directory: /tmp/Kee8yqswK7-non-logged/driver-loc/Partition_0 for store: driver-loc
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Validating change log streams: {}
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Got change log stream metadata: {}
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Assigning oldest change log offsets for taskName Partition 0 : {}
+[Samza Restore Thread-0] ContainerStorageManager [INFO] Starting stores in task instance Partition 0
+[Samza Restore Thread-0] ContainerStorageManager [INFO] Stopped persistent stores {driver-loc=org.apache.samza.storage.kv.KeyValueStorageEngine@d0ebec6}
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Re-created store driver-loc in read-write mode for task Partition 0 because it a persistent store
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Store Restore complete
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting table manager in task instance Partition 0
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting host statistics monitor
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Registering task instances with producers.
+[Samza StreamProcessor Container Thread-0] InMemorySystemProducer [INFO] Registering source TaskName-Partition 0 with in memory producer
+[Samza StreamProcessor Container Thread-0] InMemorySystemProducer [INFO] Registering source TaskName-Partition 0 with in memory producer
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting producer multiplexer.
+[Samza StreamProcessor Container Thread-0] InMemorySystemProducer [INFO] Starting in memory system producer for kafka
+[Samza StreamProcessor Container Thread-0] InMemorySystemProducer [INFO] Starting in memory system producer for default-samza-system
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Initializing stream tasks.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Registering task instances with consumers.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Starting consumer multiplexer.
+[Samza StreamProcessor Container Thread-0] InMemorySystemConsumer [INFO] Registering ssp SystemStreamPartition [kafka, events, 0] with starting offset 0
+[Samza StreamProcessor Container Thread-0] InMemorySystemConsumer [INFO] Registering ssp SystemStreamPartition [kafka, driver-locations, 0] with starting offset 0
+[Samza StreamProcessor Container Thread-0] InMemorySystemConsumer [INFO] Starting in memory system consumer...
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Entering run loop.
+[Samza StreamProcessor Container Thread-0] StreamProcessor [WARN] Received container start notification for container: org.apache.samza.container.SamzaContainer@4c4d362a in stream processor: 1.
+[Samza StreamProcessor Container Thread-0] TaskInstance [INFO] SystemStreamPartition [kafka, events, 0] has caught up.
+[Samza StreamProcessor Container Thread-0] SystemConsumers [INFO] End of stream reached for partition: SystemStreamPartition [kafka, driver-locations, 0]
+[Samza StreamProcessor Container Thread-0] RunLoop [ERROR] Got callback failure for task Partition 0
+org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.TaskCallbackImpl.failure(TaskCallbackImpl.java:89) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:75) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:749) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_382]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_382]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_382]
+Caused by: java.lang.NullPointerException
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.handleRideRequest(DriverMatchTask.java:186) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.streamEvent(DriverMatchTask.java:133) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.process(DriverMatchTask.java:76) ~[classes/:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:72) ~[samza-core_2.11-1.2.0.jar:?]
+	... 15 more
+[Samza StreamProcessor Container Thread-0] RunLoop [ERROR] Caught throwable and stopping run loop
+org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.TaskCallbackImpl.failure(TaskCallbackImpl.java:89) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:75) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165) [samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:749) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_382]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_382]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_382]
+Caused by: java.lang.NullPointerException
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.handleRideRequest(DriverMatchTask.java:186) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.streamEvent(DriverMatchTask.java:133) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.process(DriverMatchTask.java:76) ~[classes/:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:72) ~[samza-core_2.11-1.2.0.jar:?]
+	... 15 more
+[Samza StreamProcessor Container Thread-0] SamzaContainer [ERROR] Caught exception/error in run loop.
+org.apache.samza.SamzaException: org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:150) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:749) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_382]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_382]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_382]
+Caused by: org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.TaskCallbackImpl.failure(TaskCallbackImpl.java:89) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:75) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165) ~[samza-core_2.11-1.2.0.jar:?]
+	... 6 more
+Caused by: java.lang.NullPointerException
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.handleRideRequest(DriverMatchTask.java:186) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.streamEvent(DriverMatchTask.java:133) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.process(DriverMatchTask.java:76) ~[classes/:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:72) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165) ~[samza-core_2.11-1.2.0.jar:?]
+	... 6 more
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down SamzaContainer.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down consumer multiplexer.
+[Samza StreamProcessor Container Thread-0] InMemorySystemConsumer [INFO] Stopping in memory system consumer...
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down task instance stream tasks.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down timer executor
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down task instance table manager.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down container storage manager.
+[Samza StreamProcessor Container Thread-0] ContainerStorageManager [INFO] Shutdown complete
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down host statistics monitor.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down producer multiplexer.
+[Samza StreamProcessor Container Thread-0] InMemorySystemProducer [INFO] Stopping in memory system producer for kafka
+[Samza StreamProcessor Container Thread-0] InMemorySystemProducer [INFO] Stopping in memory system producer for default-samza-system
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down offset manager.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down metrics reporters.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down JVM metrics.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutting down admin multiplexer.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [INFO] Shutdown complete.
+[Samza StreamProcessor Container Thread-0] StreamProcessor [ERROR] Container: org.apache.samza.container.SamzaContainer@4c4d362a failed with an exception. Stopping the stream processor: 1. Original exception:
+org.apache.samza.SamzaException: org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:150) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.SamzaContainer.run(SamzaContainer.scala:749) [samza-core_2.11-1.2.0.jar:1.2.0]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [?:1.8.0_382]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_382]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_382]
+	at java.lang.Thread.run(Thread.java:750) [?:1.8.0_382]
+Caused by: org.apache.samza.SamzaException: Callback failed for task Partition 0, ssp SystemStreamPartition [kafka, events, 0], offset 2.
+	at org.apache.samza.task.TaskCallbackImpl.failure(TaskCallbackImpl.java:89) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:75) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165) ~[samza-core_2.11-1.2.0.jar:?]
+	... 6 more
+Caused by: java.lang.NullPointerException
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.handleRideRequest(DriverMatchTask.java:186) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.streamEvent(DriverMatchTask.java:133) ~[classes/:?]
+	at com.cloudcomputing.samza.nycabs.DriverMatchTask.process(DriverMatchTask.java:76) ~[classes/:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.process(AsyncStreamTaskAdapter.java:72) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.AsyncStreamTaskAdapter.processAsync(AsyncStreamTaskAdapter.java:63) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.container.TaskInstance$$anonfun$process$1.apply$mcV$sp(TaskInstance.scala:201) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstanceExceptionHandler.maybeHandle(TaskInstanceExceptionHandler.scala:54) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.container.TaskInstance.process(TaskInstance.scala:199) ~[samza-core_2.11-1.2.0.jar:1.2.0]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.process(RunLoop.java:470) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.run(RunLoop.java:412) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop$AsyncTaskWorker.access$300(RunLoop.java:346) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.runTasks(RunLoop.java:233) ~[samza-core_2.11-1.2.0.jar:?]
+	at org.apache.samza.task.RunLoop.run(RunLoop.java:165) ~[samza-core_2.11-1.2.0.jar:?]
+	... 6 more
+[Samza StreamProcessor Container Thread-0] StreamProcessor [INFO] Ignoring onJobModelExpired invocation since the current state is STOPPING and not in [RUNNING, STARTED].
+[Samza StreamProcessor Container Thread-0] StreamProcessor [INFO] Shutting down the executor service of the stream processor: 1.
+[Samza StreamProcessor Container Thread-0] SamzaContainer [WARN] Shutdown is no-op since the container is already in state: FAILED
+[Samza StreamProcessor Container Thread-0] StreamProcessor [INFO] Waiting 30000 ms for the container: org.apache.samza.container.SamzaContainer@4c4d362a to shutdown.
+[Samza StreamProcessor Container Thread-0] StreamProcessor [INFO] Shutdown status of container: org.apache.samza.container.SamzaContainer@4c4d362a for stream processor: 1 is: true.
+[main] TestRunner [INFO] Deleting the directory /tmp/Kee8yqswK7-non-logged
+[main] TestRunner [INFO] Deleting the directory /tmp/Kee8yqswK7-logged
+</system-out>
+    <system-err>SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/hadoop/.m2/repository/org/apache/logging/log4j/log4j-slf4j-impl/2.11.0/log4j-slf4j-impl-2.11.0.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/hadoop/.m2/repository/org/slf4j/slf4j-log4j12/1.6.2/slf4j-log4j12-1.6.2.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+</system-err>
+  </testcase>
+</testsuite>

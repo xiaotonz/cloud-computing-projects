@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Nov 19 10:18:17 UTC 2023
+http\://0.0.0.0/.error=Could not transfer artifact org.apache.maven.doxia\:doxia\:pom\:1.1 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [scala-tools.org (http\://scala-tools.org/repo-releases, default, releases+snapshots), apache.snapshots (http\://repository.apache.org/snapshots, default, snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1700389097388
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1700389097381

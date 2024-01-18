@@ -1,0 +1,29 @@
+{
+  "referenceGuide":"Cite all the reference sources in the required format. Proper citations will help you avoid unnecessary trouble but does not make it acceptable to copy code. Read the course and university policy statements in this regard. When working with others, limit the discussion to block diagrams and arrows. Do not look at another students' code. Read the JSON semantics and make use of JSON validator from the Internet if needed.",
+  "websites":[
+    {
+      "title":"How To Use Indexes in MySQL",
+      "url":"https://www.digitalocean.com/community/tutorials/how-to-use-indexes-in-mysql",
+      "code":"String sql = 'CREATE INDEX idx_cool ON reviews(cool)';",
+      "description":"<additional information you may find necessary to provide>"
+    },
+    {
+      "title":"Class SingleColumnValueFilter",
+      "url":"https://hbase.apache.org/apidocs/org/apache/hadoop/hbase/filter/SingleColumnValueFilter.html",
+      "code":"...",
+      "description":"<additional information you may find necessary to provide>"
+    },
+    {
+      "title":"Design Principles for HBase Key and Rowkey",
+      "url":"https://ajaygupta-spark.medium.com/design-principles-for-hbase-key-and-rowkey-3016a77fc52d",
+      "code":"......",
+      "description":"<additional information you may find necessary to provide>"
+    },
+    {
+      "title":"HBase Shell Commands with Examples",
+      "url":"https://www.guru99.com/hbase-shell-general-commands.html",
+      "code":"",
+      "description":"<additional information you may find necessary to provide>"
+    }
+  ]
+}

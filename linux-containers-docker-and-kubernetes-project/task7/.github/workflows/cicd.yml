@@ -1,0 +1,121 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  GCP_CLUSTER_NAME: my-gcp-cluster
+  GCP_PROJECT_ID: my-gcp-project
+  GCP_REGION: us-east1-d
+  AZ_CONTAINER_REGISTRY: xiaotonzacr.azurecr.io
+  AZ_CLUSTER_NAME: my-azure-cluster
+  AZ_RESOURCE_GROUP: my-azure-resource-group
+  AZ_REGISTRY_USERNAME: xiaotonzacr
+  AZ_REGISTRY_PASSWORD: EOgcY7AY+ZQv5+bIM6fd09HEcLff8Me1k21LXfdbuh+ACRAtJD8j
+
+jobs:
+  prep-matrix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Get changed files
+        id: changed-files
+        run: |
+          echo "::set-output name=files::$(git diff --name-only HEAD~1)"
+      - name: Setup gcloud CLI
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ env.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - name: Get Docker rebuilds
+        id: matrix-docker-gcp
+        run: |
+          echo "::set-output name=rebuilds::$(./scripts/get-changed-microservices.sh ${{ env.GCP_PROJECT_ID }} ${{ env.GCP_REGION }} ${{ env.GCP_CLUSTER_NAME }} ${{ steps.changed-files.outputs.files }})"
+      - name: Get K8s redeployments
+        id: matrix-k8s-gcp
+        run: |
+          echo "::set-output name=redeploys::$(./scripts/get-changed-deployments.sh ${{ env.GCP_PROJECT_ID }} ${{ env.GCP_REGION }} ${{ env.GCP_CLUSTER_NAME }} ${{ steps.changed-files.outputs.files }})"
+      - name: Get Docker rebuilds
+        id: matrix-docker-az
+        run: |
+          echo "::set-output name=rebuilds::$(./scripts/get-changed-microservices.sh ${{ env.AZ_RESOURCE_GROUP }} ${{ env.AZ_CLUSTER_NAME }} ${{ env.AZ_CONTAINER_REGISTRY }} ${{ steps.changed-files.outputs.files }})"
+      - name: Get K8s redeployments
+        id: matrix-k8s-az
+        run: |
+          echo "::set-output name=redeploys::$(./scripts/get-changed-deployments.sh ${{ env.AZ_RESOURCE_GROUP }} ${{ env.AZ_CLUSTER_NAME }} ${{ env.AZ_CONTAINER_REGISTRY }} ${{ steps.changed-files.outputs.files }})"
+      - name: Convert to JSON
+        id: matrix-json
+        run: |
+          echo "::set-output name=json::$(jq -n --argjson rebuilds_gcp "${{ steps.matrix-docker-gcp.outputs.rebuilds }}" --argjson redeploys_gcp "${{ steps.matrix-k8s-gcp.outputs.redeploys }}" --argjson rebuilds_az "${{ steps.matrix-docker-az.outputs.rebuilds }}" --argjson redeploys_az "${{ steps.matrix-k8s-az.outputs.redeploys }}" '{ rebuilds_gcp: $rebuilds_gcp, redeploys_gcp: $redeploys_gcp, rebuilds_az: $rebuilds_az, redeploys_az: $redeploys_az }')"
+
+  build-docker-image-gcp:
+    runs-on: ubuntu-latest
+    needs: prep-matrix
+    strategy:
+      matrix:
+        microservices: ${{ fromJSON(needs.prep-matrix.outputs.json).rebuilds_gcp }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup gcloud CLI
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ env.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - name: Build and push Docker image
+        run: |
+          cd ${{ matrix.microservices }}-service
+          docker build -t gcr.io/${{ env.GCP_PROJECT_ID }}/${{ matrix.microservices }}:${{ github.sha }} .
+          docker push gcr.io/${{ env.GCP_PROJECT_ID }}/${{ matrix.microservices }}:${{ github.sha }}
+
+  deploy-service-gcp:
+    runs-on: ubuntu-latest
+    needs: build-docker-image-gcp
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Setup gcloud CLI
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          project_id: ${{ env.GCP_PROJECT_ID }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - name: Deploy to GCP
+        run: |
+          ./scripts/deploy-to-gcp.sh ${{ env.GCP_PROJECT_ID }} ${{ env.GCP_REGION }} ${{ env.GCP_CLUSTER_NAME }} ${{ matrix.microservices }} ${{ github.sha }}
+
+  build-docker-image-az:
+    runs-on: ubuntu-latest
+    needs: prep-matrix
+    strategy:
+      matrix:
+        microservices: ${{ fromJSON(needs.prep-matrix.outputs.json).rebuilds_az }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Docker configuration
+        uses: azure/docker-login@v1
+        with:
+          login-server: ${{ env.AZ_CONTAINER_REGISTRY }}
+          username: ${{ secrets.AZ_REGISTRY_USERNAME }}
+          password: ${{ secrets.AZ_REGISTRY_PASSWORD }}
+      - name: Build and push Docker image
+        run: |
+          cd ${{ matrix.microservices }}-service
+          docker build -t ${{ env.AZ_CONTAINER_REGISTRY }}/${{ matrix.microservices }}:${{ github.sha }} .
+          docker push ${{ env.AZ_CONTAINER_REGISTRY }}/${{ matrix.microservices }}:${{ github.sha }}
+
+  deploy-service-az:
+    runs-on: ubuntu-latest
+    needs: build-docker-image-az
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Deploy to Azure
+        run: |
+          ./scripts/deploy-to-azure.sh ${{ env.AZ_RESOURCE_GROUP }} ${{ env.AZ_CLUSTER_NAME }} ${{ env.AZ_CONTAINER_REGISTRY }} ${{ matrix.microservices }} ${{ github.sha }}

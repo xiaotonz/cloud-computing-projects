@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.apache.samza</groupId>
+  <artifactId>samza-shell</artifactId>
+  <version>1.6.0</version>
+  <name>Apache Samza</name>
+  <description>A distributed stream processing framework built upon Apache Kafka and Apache Hadoop YARN.</description>
+  <url>http://samza.apache.org/</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+  <scm>
+    <connection>scm:http://git-wip-us.apache.org/repos/asf/samza.git</connection>
+    <developerConnection>scm:https://git-wip-us.apache.org/repos/asf/samza.git</developerConnection>
+    <url>https://git-wip-us.apache.org/repos/asf?p=samza.git;a=tree</url>
+  </scm>
+</project>

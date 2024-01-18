@@ -1,0 +1,5 @@
+{"blockId":5647,"driverId":7806,"latitude":40.7901188,"longitude":-73.9747985,"type":"ENTERING_BLOCK","status":"AVAILABLE","rating":2.14,"salary":11,"gender":"F"}
+{"blockId":1930,"clientId":6343,"latitude":40.731471,"longitude":-73.9901805,"type":"RIDE_REQUEST","gender_preference":"N"}
+{"blockId":1113,"driverId":4843,"latitude":40.7182511,"longitude":-74.0053824,"type":"ENTERING_BLOCK","status":"UNAVAILABLE","rating":3.7,"salary":26,"gender":"M"}
+{"blockId":6,"driverId":3602,"latitude":40.7014372,"longitude":-74.0119515,"type":"LEAVING_BLOCK","status":"UNAVAILABLE"}
+{"blockId":1544,"driverId":8429,"latitude":40.7258816,"longitude":-73.9775455,"type":"RIDE_COMPLETE","gender":"M","rating":4.79,"user_rating":4.0,"salary":25}

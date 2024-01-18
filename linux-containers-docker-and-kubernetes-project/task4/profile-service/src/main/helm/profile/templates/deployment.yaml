@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-profile-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spring-profile
+  template:
+    metadata:
+      labels:
+        app: spring-profile
+    spec:
+      containers:
+      - name: spring-profile-container
+        image: gcr.io/gcp-docker-kubernetes-400712/profile-service:v7
+        envFrom:
+        - configMapRef:
+            name: spring-profile-config
+        ports:
+        - containerPort: 8080

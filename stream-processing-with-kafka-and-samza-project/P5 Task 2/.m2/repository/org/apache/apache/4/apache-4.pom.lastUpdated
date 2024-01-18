@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Nov 19 12:05:23 UTC 2023
+file\:///home/hadoop/.m2/repository/.lastUpdated=1700389018311
+http\://0.0.0.0/.error=Could not transfer artifact org.apache\:apache\:pom\:4 from/to maven-default-http-blocker (http\://0.0.0.0/)\: Blocked mirror for repositories\: [scala-tools.org (http\://scala-tools.org/repo-releases, default, releases+snapshots)]
+https\://repo.maven.apache.org/maven2/.lastUpdated=1700395523942
+@default-maven-default-http-blocker-http\://0.0.0.0/.lastUpdated=1700395523933
+https\://repository.apache.org/content/groups/public/.lastUpdated=1700389018531
+file\:///home/hadoop/.m2/repository/.error=
